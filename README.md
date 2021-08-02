@@ -17,5 +17,6 @@ Essentiellement, le défi consistait à créer une API-REST avec deux endpoint, 
 
 O desafio foi aplicado pela compania em um de seus processos de recrutamento. Por razões políticas não publicarei o desafio usando as mesmas palavras que foram utilizadas, e que obtive livre acesso. Basicamente, o desafio foi consistido em criar uma API-REST com dois endpoints, com relacionamento entre tabelas usando @Jpa annotations.
 
+
 ______________________________________________________________________________________________________________________________________________________________________________
 
