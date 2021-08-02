@@ -19,7 +19,6 @@ public class AddressRegistrationController {
         this.addressService = addressService;
     }
 
-
     @GetMapping("/address")
     @ResponseStatus(HttpStatus.OK)
     public List<Address> listAll() {

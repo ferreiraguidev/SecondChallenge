@@ -32,7 +32,7 @@ public class Users {
     @NotNull
     private LocalDate birth;
 
-    @OneToMany
+    @OneToMany(mappedBy = "users")
     private List<Address> addresses;
 
 

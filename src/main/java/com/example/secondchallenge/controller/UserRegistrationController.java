@@ -30,5 +30,4 @@ public class UserRegistrationController {
         return new ResponseEntity<>(userService.save(userPostRequestBody), HttpStatus.CREATED);
 
     }
-
 }

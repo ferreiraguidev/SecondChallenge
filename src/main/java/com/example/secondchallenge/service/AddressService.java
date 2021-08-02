@@ -27,6 +27,7 @@ public class AddressService {
                 .city(addressPostRequestBody.getCity())
                 .county(addressPostRequestBody.getCounty())
                 .CEP(addressPostRequestBody.getCEP())
+                .userEmail(addressPostRequestBody.getUserEmail())
                 .users(userRepository.findById(addressPostRequestBody.getUserId())
                         .orElseThrow(() -> new NullPointerException("Not found")))
                 .build();

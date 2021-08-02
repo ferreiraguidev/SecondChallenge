@@ -26,8 +26,6 @@ public class UserService {
                 .userEmail(userPostRequestBody.getUserEmail())
                 .cpf(userPostRequestBody.getCpf())
                 .birth(userPostRequestBody.getBirth())
-//                .addresses(addressRepository.findById(userPostRequestBody.getAddress_id())
-//                        .orElseThrow(()-> new NullPointerException("Could not find address")))
                 .build();
 
         return userRepository.save(users);

@@ -15,6 +15,8 @@ public class AddressPostRequestBody {
     @NotNull
     private Long CEP;
 
+    private String userEmail;
+
     @NotBlank
     private String city;
 

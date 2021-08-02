@@ -10,6 +10,11 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.awt.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Builder
@@ -31,16 +36,12 @@ public class Address {
     private String county;
     private Long CEP;
 
-
+    @Column(unique = true)
     private String userEmail;
 
     @ManyToOne
     @JsonIgnore
     private Users users;
-
-
-// curso_id is set up here
-
 
 
 }
