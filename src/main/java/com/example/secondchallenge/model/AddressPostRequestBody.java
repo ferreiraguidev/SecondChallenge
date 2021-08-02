@@ -7,6 +7,7 @@ import javax.validation.constraints.NotNull;
 
 @Data
 public class AddressPostRequestBody {
+
     @NotNull
     private Long logadouro;
     @NotNull
@@ -19,5 +20,8 @@ public class AddressPostRequestBody {
 
     @NotBlank
     private String county;
+
+    @NotNull
+    private Long userId;
 
 }

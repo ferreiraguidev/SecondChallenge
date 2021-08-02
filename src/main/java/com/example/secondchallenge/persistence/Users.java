@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
+import java.util.List;
 
 @Builder
 @Data
@@ -28,14 +29,12 @@ public class Users {
     private String userEmail;
     private Long cpf;
 
-
     @NotNull
     private LocalDate birth;
 
+    @OneToMany
+    private List<Address> addresses;
 
-//    @ManyToOne
-//    @JsonIgnore
-//    private Address addressess;
 
 
 }

@@ -21,5 +21,8 @@ public class UserPostRequestBody {
 
     @NotNull
     private LocalDate birth;
+//
+//    @NotNull
+//    private Long address_id;
 
 }

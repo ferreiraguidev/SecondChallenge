@@ -1,8 +1,11 @@
 package com.example.secondchallenge.service;
 
 import com.example.secondchallenge.model.UserPostRequestBody;
+import com.example.secondchallenge.persistence.Address;
 import com.example.secondchallenge.persistence.Users;
+import com.example.secondchallenge.repository.AddressRepository;
 import com.example.secondchallenge.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,11 +13,11 @@ import java.util.List;
 @Service
 public class UserService {
 
-    private final UserRepository userRepository;
+    @Autowired
+    UserRepository userRepository;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    @Autowired
+    AddressRepository addressRepository;
 
     public Users save(UserPostRequestBody userPostRequestBody) {
 
@@ -23,6 +26,8 @@ public class UserService {
                 .userEmail(userPostRequestBody.getUserEmail())
                 .cpf(userPostRequestBody.getCpf())
                 .birth(userPostRequestBody.getBirth())
+//                .addresses(addressRepository.findById(userPostRequestBody.getAddress_id())
+//                        .orElseThrow(()-> new NullPointerException("Could not find address")))
                 .build();
 
         return userRepository.save(users);
