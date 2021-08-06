@@ -7,15 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.awt.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 @Builder
 @Data
@@ -28,16 +20,12 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long address_id;
 
-    @Column
-    @NotNull
-    private Long logadouro;
-    private Long number;
+    private String logradouro;
+    private String number;
     private String city;
     private String county;
-    private Long CEP;
-
-    @Column(unique = true)
-    private String userEmail;
+    private String cep;
+    private String district;
 
     @ManyToOne
     @JsonIgnore

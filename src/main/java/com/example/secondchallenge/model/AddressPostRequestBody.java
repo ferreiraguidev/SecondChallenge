@@ -9,19 +9,22 @@ import javax.validation.constraints.NotNull;
 public class AddressPostRequestBody {
 
     @NotNull
-    private Long logadouro;
-    @NotNull
-    private Long number;
-    @NotNull
-    private Long CEP;
+    private String logradouro;
 
-    private String userEmail;
+    @NotNull
+    private String number;
+
+    @NotNull
+    private String cep;
 
     @NotBlank
     private String city;
 
     @NotBlank
     private String county;
+
+    @NotNull
+    private String district;
 
     @NotNull
     private Long userId;
